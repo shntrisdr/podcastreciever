@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Inbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Inbox</h1>
+      <a href="settings.html">Settings</a>
+    </header>
+
+    <main class="player-section">
+      <button id="play-pause-btn" class="play-btn">▶</button>
+      <div id="current-track-info" class="hidden">
+        <div id="current-title" class="current-track"></div>
+        <div id="current-feed-title" class="current-feed"></div>
+      </div>
+      <div id="empty-state" class="current-track hidden">No unread episodes</div>
+    </main>
+
+    <section class="inbox-section">
+      <div class="inbox-header">
+        <span>Up next</span>
+        <button id="sort-toggle" class="sort-toggle">Order: Newest</button>
+      </div>
+      <ul id="track-list" class="track-list">
+        <!-- Tracks will be injected here -->
+      </ul>
+    </section>
+  </div>
+
+  <!-- Audio element for playback -->
+  <audio id="audio-player"></audio>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
