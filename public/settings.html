@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Settings - Inbox</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Settings</h1>
+      <a href="index.html">Back to Inbox</a>
+    </header>
+
+    <main>
+      <form id="add-feed-form" class="settings-form">
+        <input type="url" id="feed-url-input" placeholder="https://example.com/feed.xml" required>
+        <button type="submit" id="add-btn" class="btn-primary">Add Subscription</button>
+      </form>
+
+      <section>
+        <h2>Subscriptions</h2>
+        <ul id="feed-list" class="feed-list">
+          <!-- Feeds will be injected here -->
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="db.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
