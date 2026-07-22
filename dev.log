@@ -1,11 +1,11 @@
-npm warn exec The following package was not found and will be installed: wrangler@4.107.0
+npm warn exec The following package was not found and will be installed: wrangler@4.113.0
 
- ⛅️ wrangler 4.107.0
+ ⛅️ wrangler 4.113.0
 ────────────────────
-[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNo compatibility_date was specified. Using today's date: 2026-07-06.[0m
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mNo compatibility_date was specified. Using today's date: 2026-07-22.[0m
 
-  ❯❯ Add one to your Wrangler configuration file: compatibility_date = "2026-07-06", or
-  ❯❯ Pass it in your terminal: wrangler pages dev [<DIRECTORY>] --compatibility-date=2026-07-06
+  ❯❯ Add one to your Wrangler configuration file: compatibility_date = "2026-07-22", or
+  ❯❯ Pass it in your terminal: wrangler pages dev [<DIRECTORY>] --compatibility-date=2026-07-22
 
   See [4mhttps://developers.cloudflare.com/workers/platform/compatibility-dates/[0m for more information.
 
@@ -14,26 +14,13 @@ npm warn exec The following package was not found and will be installed: wrangle
 Your Worker has access to the following bindings:
 Binding                                                                   Resource                  Mode
 env.CF_PAGES ("1")                                                        Environment Variable      local
-env.CF_PAGES_BRANCH ("implement-minimalist-podcast-pwa-1194...")          Environment Variable      local
-env.CF_PAGES_COMMIT_SHA ("7fddaa024dbfaafd381d79aa9cf1aa46121fb...")      Environment Variable      local
-env.CF_PAGES_URL ("https://7fddaa0.app.pages.dev")                        Environment Variable      local
+env.CF_PAGES_BRANCH ("jules-6840567288322937011-90555f40")                Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("8fee650e3b0f73a56d623b563561d0caf4406...")      Environment Variable      local
+env.CF_PAGES_URL ("https://8fee650.app.pages.dev")                        Environment Variable      local
 
 ⎔ Starting local server...
 [wrangler:info] Ready on http://localhost:8788
-[wrangler:info] GET / 200 OK (19ms)
-[wrangler:info] GET / 200 OK (26ms)
-[wrangler:info] GET /style.css 200 OK (14ms)
-[wrangler:info] GET /db.js 200 OK (23ms)
-[wrangler:info] GET /artwork.js 200 OK (24ms)
-[wrangler:info] GET /app.js 200 OK (38ms)
-[wrangler:info] GET /settings.html 308 Permanent Redirect (7ms)
-[wrangler:info] GET /settings 200 OK (9ms)
-[wrangler:info] GET /style.css 304 Not Modified (27ms)
-[wrangler:info] GET /db.js 304 Not Modified (25ms)
-[wrangler:info] GET /settings.js 200 OK (24ms)
-[wrangler:info] GET /api/fetch-rss 200 OK (124ms)
-[wrangler:info] GET / 304 Not Modified (8ms)
-[wrangler:info] GET /style.css 304 Not Modified (9ms)
-[wrangler:info] GET /db.js 304 Not Modified (11ms)
-[wrangler:info] GET /artwork.js 304 Not Modified (10ms)
-[wrangler:info] GET /app.js 304 Not Modified (12ms)
+[wrangler:info] GET /api/fetch-rss 200 OK (268ms)
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 1 error:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "/app/.wrangler/tmp/bundle-snKZy4/middleware-loader.entry.ts"[0m
