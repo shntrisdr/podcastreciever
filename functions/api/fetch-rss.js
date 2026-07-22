@@ -15,7 +15,8 @@ export async function onRequest(context) {
   try {
     const response = await fetch(targetUrl, {
       headers: {
-        'User-Agent': 'PodcastReceiver/1.0 (Cloudflare Pages)'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 PodcastReceiver/1.0',
+        'Accept': 'application/rss+xml, application/xml, text/xml, */*'
       }
     });
 
