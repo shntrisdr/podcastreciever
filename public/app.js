@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function updateUI() {
     if (queue.length === 0 || currentIndex >= queue.length) {
-      artworkCanvas.classList.add('hidden');
+      if (artworkCanvas) artworkCanvas.classList.add('hidden');
       playPauseBtn.classList.add('hidden');
       currentTrackInfoEl.classList.add('hidden');
       emptyStateEl.classList.remove('hidden');
@@ -62,14 +62,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     playPauseBtn.classList.remove('hidden');
-    artworkCanvas.classList.remove('hidden');
+    if (artworkCanvas) artworkCanvas.classList.remove('hidden');
     emptyStateEl.classList.add('hidden');
     currentTrackInfoEl.classList.remove('hidden');
 
     const currentTrack = queue[currentIndex];
 
-    if (artworkCanvas.dataset.guid !== currentTrack.guid) {
-      window.generateArtwork(artworkCanvas, currentTrack.imageUrl, currentTrack.title);
+    if (artworkCanvas && artworkCanvas.dataset.guid !== currentTrack.guid) {
+      if (window.generateArtwork) {
+        window.generateArtwork(artworkCanvas, currentTrack.imageUrl, currentTrack.title);
+      }
       artworkCanvas.dataset.guid = currentTrack.guid;
     }
 
