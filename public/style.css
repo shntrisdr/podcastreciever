@@ -213,4 +213,4 @@ input[type="url"]:focus {
 .hidden {
   display: none !important;
 }
-#artwork-canvas { display: block; margin: 0 auto 20px; border-radius: 8px; max-width: 100%; height: auto; }
+#artwork-canvas { display: block; margin: 0 auto 20px; border-radius: 8px; max-width: 100%; width: 280px; height: auto; background: #111111; }

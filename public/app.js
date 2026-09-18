@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await window.db.init();
 
   const audioPlayer = document.getElementById('audio-player');
-  const artworkCanvas = document.getElementById('artwork-canvas');
+  let artworkCanvas = document.getElementById('artwork-canvas');
   const playPauseBtn = document.getElementById('play-pause-btn');
   const currentTitleEl = document.getElementById('current-title');
   const currentFeedTitleEl = document.getElementById('current-feed-title');
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const currentTrack = queue[currentIndex];
 
     if (artworkCanvas.dataset.guid !== currentTrack.guid) {
-      window.generateArtwork(artworkCanvas, currentTrack.imageUrl, currentTrack.title);
+      artworkCanvas = window.generateArtwork(artworkCanvas, currentTrack.imageUrl, currentTrack.title);
       artworkCanvas.dataset.guid = currentTrack.guid;
     }
 
